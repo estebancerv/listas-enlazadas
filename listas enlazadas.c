@@ -68,12 +68,24 @@ struct node borrar(int ele, struct node *cabeza){
 	return *cabeza;
 }
 
+struct node *insertarp(int ele, struct node *cabeza){
+	struct node *temp;
+	temp=malloc(sizeof(struct node));
+	temp->val=ele;
+	temp->next=cabeza;
+	cabeza=temp;
+	return cabeza;
+}
+
+
 main() {
 	struct node *a;
 	a=malloc(sizeof(struct node));
 	crearlista(4,a);
 	printlista(a);
 	borrar(3,a);
+	printlista(a);
+	a = insertarp(5,a);
 	printlista(a);
 	return 0;
 }
