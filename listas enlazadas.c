@@ -77,6 +77,21 @@ struct node *insertarp(int ele, struct node *cabeza){
 	return cabeza;
 }
 
+/*struct node *insertmid(int ele,int lug, struct node *cabeza){
+	int i;
+	struct node *temp;
+	struct node *cur;
+	temp=malloc(sizeof(struct node));
+	temp->val=ele;
+	for (i=0;i<=lug;i++){
+		if (i==ele){
+			temp->next=cur->next;
+			cur->next=temp;
+		}
+		cur=cur->next;
+	}
+	return cabeza;
+}*/
 
 main() {
 	struct node *a;
@@ -84,8 +99,13 @@ main() {
 	crearlista(4,a);
 	printlista(a);
 	borrar(3,a);
+	printf("\n");
 	printlista(a);
 	a = insertarp(5,a);
+	printf("\n");
 	printlista(a);
+	/*insertmid(3,4,a);
+	printf("\n");
+	printlista(a);*/
 	return 0;
 }
