@@ -26,7 +26,7 @@ void printlista(struct node *cabeza){
 	}
 }
 
-struct node borrar(int ele, struct node *cabeza){
+/*struct node borrar(int ele, struct node *cabeza){
 	int cont=0;
 	struct node *t;
 	t=malloc(sizeof(struct node));
@@ -39,14 +39,14 @@ struct node borrar(int ele, struct node *cabeza){
 		cont++;
 	}
 	return *cabeza;
-}
+}*/
 
 main() {
 	struct node *a;
 	a=malloc(sizeof(struct node));
 	crearlista(a);
 	printlista(a);
-	borrar(1,a);
+	/*borrar(1,a);*/
 	printlista(a);
 	return 0;
 }
